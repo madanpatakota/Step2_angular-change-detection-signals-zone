@@ -1,0 +1,79 @@
+<div class="container mt-5">
+
+  <h2 class="mb-4">
+    Angular Change Detection
+  </h2>
+
+
+  <!-- Example 1 -->
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-primary text-white">
+      Example 1 - Component Data Change
+    </div>
+
+    <div class="card-body">
+
+      <h5>
+        Employee: {{ employeeName }}
+      </h5>
+
+      <button
+        class="btn btn-primary mt-2"
+        (click)="changeEmployee()">
+        Change Employee
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Example 2 -->
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-success text-white">
+      Example 2 - Event and UI Update
+    </div>
+
+    <div class="card-body">
+
+      <h5>
+        Status: {{ employeeStatus }}
+      </h5>
+
+      <button
+        class="btn btn-success mt-2"
+        (click)="changeStatus()">
+        Change Status
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Example 3 -->
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-dark text-white">
+      Example 3 - Asynchronous Change
+    </div>
+
+    <div class="card-body">
+
+      <h5>
+        {{ currentTime }}
+      </h5>
+
+      <button
+        class="btn btn-dark mt-2"
+        (click)="startTimer()">
+        Start Timer
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
