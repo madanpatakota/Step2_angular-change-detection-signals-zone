@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Default vs OnPush with @Input()</h2>
+
+  <div class="text-center mb-4">
+    <button class="btn btn-warning me-3" (click)="changeSameObject()">
+      Change Name - Same Object
+    </button>
+
+    <button class="btn btn-success" (click)="changeNewObject()">
+      Change Name - New Object
+    </button>
+  </div>
+
+  <div class="alert alert-info">
+    <b>Parent Name:</b> {{ employee.name }}
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <app-default-child [employee]="employee"></app-default-child>
+    </div>
+
+    <div class="col-md-6">
+      <app-onpush-child [employee]="employee"></app-onpush-child>
+    </div>
+  </div>
+</div>
