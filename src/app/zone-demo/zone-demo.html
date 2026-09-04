@@ -1,0 +1,35 @@
+<div class="container mt-5">
+
+  <h2 class="mb-4">
+    Zone.js and NgZone
+  </h2>
+
+  <div class="card shadow-sm">
+
+    <div class="card-header bg-primary text-white">
+      Employee Processing
+    </div>
+
+    <div class="card-body">
+
+      <h4>
+        Status: {{ status }}
+      </h4>
+
+      <button
+        class="btn btn-primary me-2"
+        (click)="processInsideAngular()">
+        Process Inside Angular
+      </button>
+
+      <button
+        class="btn btn-success"
+        (click)="processOutsideAngular()">
+        Process Outside Angular
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
