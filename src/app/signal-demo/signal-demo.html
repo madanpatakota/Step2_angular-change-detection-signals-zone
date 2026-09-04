@@ -1,0 +1,111 @@
+<div class="container mt-5">
+
+  <h2 class="mb-4">
+    Understanding Angular Signals
+  </h2>
+
+
+  <!-- Example 1 -->
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-primary text-white">
+      Example 1 - Creating and Reading a Signal
+    </div>
+
+    <div class="card-body">
+
+      <h4>
+        Employee Name: {{ employeeName() }}
+      </h4>
+
+      <p>
+        Employee Count: {{ employeeCount() }}
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Example 2 -->
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-success text-white">
+      Example 2 - Updating Signal using set()
+    </div>
+
+    <div class="card-body">
+
+      <h4>
+        Employee Name: {{ employeeName() }}
+      </h4>
+
+      <button
+        class="btn btn-success"
+        (click)="changeEmployee()">
+
+        Change Employee
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Example 3 -->
+  <div class="card shadow-sm mb-4">
+
+    <div class="card-header bg-warning">
+      Example 3 - Updating Signal using update()
+    </div>
+
+    <div class="card-body">
+
+      <h4>
+        Employee Count: {{ employeeCount() }}
+      </h4>
+
+      <button
+        class="btn btn-primary me-2"
+        (click)="increaseEmployeeCount()">
+
+        Increase
+
+      </button>
+
+      <button
+        class="btn btn-danger"
+        (click)="decreaseEmployeeCount()">
+
+        Decrease
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- Reset -->
+  <div class="card shadow-sm">
+
+    <div class="card-header bg-dark text-white">
+      Reset Signals
+    </div>
+
+    <div class="card-body">
+
+      <button
+        class="btn btn-secondary"
+        (click)="resetEmployee()">
+
+        Reset
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>

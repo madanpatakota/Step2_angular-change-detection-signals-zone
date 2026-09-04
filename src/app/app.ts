@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { SignalDemoComponent } from './signal-demo/signal-demo';
 
 @Component({
-  imports: [],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [SignalDemoComponent],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
 
