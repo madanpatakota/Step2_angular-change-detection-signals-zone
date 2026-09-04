@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-change-detection-demo',
@@ -8,11 +8,15 @@ import { Component } from '@angular/core';
 })
 export class ChangeDetectionDemoComponent {
 
+  constructor( private cdr: ChangeDetectorRef){
+    
+  }
+
   employeeName = 'Madan';
 
   employeeStatus = 'Active';
 
-  currentTime = new Date();
+  currentTime : any= new Date();
 
 
   changeEmployee() {
@@ -27,8 +31,11 @@ export class ChangeDetectionDemoComponent {
 
   startTimer() {
 
+    this.currentTime = "No vlaue";
+    
     setInterval(() => {
       this.currentTime = new Date();
+      this.cdr.markForCheck();
     }, 1000);
 
   }
