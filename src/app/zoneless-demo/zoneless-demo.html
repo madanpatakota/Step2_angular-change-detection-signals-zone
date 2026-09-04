@@ -1,0 +1,104 @@
+<div class="container mt-5">
+
+  <h2 class="mb-4">
+    Signals and Zoneless Change Detection
+  </h2>
+
+
+  <div class="row">
+
+    <!-- Normal Property -->
+    <div class="col-md-6">
+
+      <div class="card shadow-sm h-100">
+
+        <div class="card-header bg-primary text-white">
+          Normal Property
+        </div>
+
+        <div class="card-body">
+
+          <h4>
+            Status: {{ normalStatus }}
+          </h4>
+
+          <button
+            class="btn btn-primary"
+            (click)="processNormalProperty()">
+
+            Start Processing
+
+          </button>
+
+          <hr>
+
+          <p>
+            Uses:
+          </p>
+
+          <code>
+            cdr.markForCheck()
+          </code>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Signal -->
+    <div class="col-md-6">
+
+      <div class="card shadow-sm h-100">
+
+        <div class="card-header bg-success text-white">
+          Signal
+        </div>
+
+        <div class="card-body">
+
+          <h4>
+            Status: {{ signalStatus() }}
+          </h4>
+
+          <button
+            class="btn btn-success"
+            (click)="processSignal()">
+
+            Start Processing
+
+          </button>
+
+          <hr>
+
+          <p>
+            Uses:
+          </p>
+
+          <code>
+            signalStatus.set()
+          </code>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="mt-4">
+
+    <button
+      class="btn btn-secondary"
+      (click)="reset()">
+
+      Reset
+
+    </button>
+
+  </div>
+
+</div>

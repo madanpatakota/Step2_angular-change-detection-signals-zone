@@ -1,10 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { ZonelessDemoComponent } from './zoneless-demo/zoneless-demo';
 
 @Component({
-  imports: [],
   selector: 'app-root',
-  styleUrl: './app.css',
+  imports: [ZonelessDemoComponent],
   templateUrl: './app.html',
+  styleUrl: './app.css'
 })
 export class App {
 
